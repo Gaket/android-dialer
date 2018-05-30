@@ -18,12 +18,11 @@ buildscript {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
 
@@ -43,18 +42,18 @@ configurations {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:support-annotations:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.googlecode.libphonenumber:libphonenumber:8.8.0'
-    testCompile 'junit:junit:4.12'
-    javadocDeps 'com.android.support:support-annotations:25.3.1'
-    javadocDeps 'com.android.support:appcompat-v7:25.3.1'
-    javadocDeps 'com.android.support:design:25.3.1'
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.8.0'
+    testImplementation 'junit:junit:4.12'
+    javadocDeps 'com.android.support:support-annotations:27.1.1'
+    javadocDeps 'com.android.support:appcompat-v7:27.1.1'
+    javadocDeps 'com.android.support:design:27.1.1'
     javadocDeps 'com.googlecode.libphonenumber:libphonenumber:8.8.0'
 }
 
